@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Signika:wght@300..700&display=swap');
+
+:root{
+  --salmon: #ef9d71;
+  --black: #000;
+  --white: #fff;
+  --cyan: #AEDEE0;
+  --dsalmon: #532521;
+  --dcyan: #1f2f32;
+}
+
+body{
+  transition: background-color ease-out .5s;
+}
+
+.vdodiv{
+  clip-path: circle(var(--clip) at 50% 50%);
+}
+
+*::selection{
+  background-color: var(--salmon);
+}
+
+*{
+  box-sizing: border-box;
+}
+
+
+/* This below, works as if statement of javascript */
+body[theme="black"] {
+  background-color: var(--black);
+}
+/* Agr body ke theme attribute me black ho to section wali class ki sari cheezon ka text color white krdo */
+body[theme="black"] .section{
+  color: var(--white);
+}
+
+body[theme="cyan"] {
+  background-color: var(--cyan);
+}
+body[theme="cyan"] .section{
+  color: var(--dcyan);
+}
+
+body[theme="salmon"] {
+  background-color: var(--salmon);
+}
+body[theme="salmon"] .section{
+  color: var(--dsalmon);
+}
+
+body[theme="white"] {
+  background-color: var(--white);
+}
+body[theme="white"] .section{
+  color: var(--black);
+}
+
+
+.yap .f-18:before {
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  aspect-ratio: 1;
+  width: 16px;
+  background-image: url(https://uploads-ssl.webflow.com/659dbdfd5a080be8d3483164/66325831817fdf195f2e03bf_Quote%201.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transform: translateY(-10px);
+}
+.yap .f-18:after{
+  content: "";
+  aspect-ratio: 1;
+  display: inline-block;
+  margin-left: 10px;
+  width: 16px;
+  background-image: url(https://uploads-ssl.webflow.com/659dbdfd5a080be8d3483164/66325831750f0654b9890461_Quote%202.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  /* transform: translateY(10px); */
+}
